@@ -13,6 +13,7 @@ namespace LoginAttempt
             credentials.createCredentials();
             do
             {
+                Console.WriteLine();
                 credentials.loginCredentials();
                 credentials.loginCounter();
             } while ((credentials.loginUsername != credentials.userName || credentials.loginPassword != credentials.passWord) && credentials.attempt != 3);
