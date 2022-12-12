@@ -5,10 +5,18 @@ namespace LoginAttempt
     public class Credentials
     {
         public int attempt = 0;
-        public string userName = "ABC";
-        public string passWord = "123";
+        public string userName;
+        public string passWord;
         public string loginUsername;
         public string loginPassword;
+        
+        public void createCredentials()
+        {
+            Console.Write("Create a username: ");
+            userName = Console.ReadLine();
+            Console.Write("Create a password: ");
+            passWord = Console.ReadLine();
+        }
         
         public void loginCredentials()
         {
