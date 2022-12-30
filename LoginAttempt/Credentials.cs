@@ -4,53 +4,53 @@ namespace LoginAttempt
 {
     public class Credentials
     {
-        public int attempt = 0;
-        public string userName;
-        public string passWord;
+        public int attempts = 0;
+        public string createUserName;
+        public string createPassWord;
         public string loginUsername;
         public string loginPassword;
         
-        public void createCredentials()
+        public void CreateCredentials()
         {
             Console.Write("Create a username: ");
-            userName = Console.ReadLine();
+            createUserName = Console.ReadLine();
             Console.Write("Create a password: ");
-            passWord = Console.ReadLine();
+            createPassWord = Console.ReadLine();
         }
         
-        public void loginCredentials()
+        public void LoginCredentials()
         {
             Console.Write("Enter your username: ");
             loginUsername = Console.ReadLine();
             Console.Write("Enter your password: ");
             loginPassword = Console.ReadLine();
             
-            if (loginUsername != userName)
+            if (loginUsername != createUserName)
             {
                 Console.WriteLine("You have submitted an incorrect username! Try again.");
             }
             
-            if (loginPassword != passWord)
+            if (loginPassword != createPassWord)
             {
                 Console.WriteLine("You have submitted an incorrect password! Try again.");
             }
         }
 
-        public void loginCounter()
+        public void LoginCounter()
         {
-            if (loginUsername != userName || loginPassword != passWord)
+            if (loginUsername != createUserName || loginPassword != createPassWord)
             {
-                attempt++;
+                attempts++;
             }
             else
             {
-                attempt = 1;
+                attempts = 1;
             }
         }
         
-        public void attemptMax()
+        public void AttemptMax()
         {
-            if (attempt == 3)
+            if (attempts == 3)
             {
                 Console.WriteLine("Login attempt reached three times. Try again later!");
             }
